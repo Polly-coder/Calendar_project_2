@@ -6,7 +6,7 @@ from meetme.models import Event
 class EventsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('id', 'name', 'date', 'user')
+        fields = ('id', 'name', 'date', 'user', 'guest')
 
 class EventDetailSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default = serializers.CurrentUserDefault())
