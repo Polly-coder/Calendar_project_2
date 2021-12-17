@@ -4,7 +4,7 @@ from rest_framework import generics
 from meetme.serializers import EventDetailSerializer, EventsListSerializer
 from meetme.models import Event
 from meetme.permissions import IsOwnerOrReadOnly
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 # Create your views here.
 
