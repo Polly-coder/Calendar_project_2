@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import views
+
+#from DjRest import meetme
+#from meetme.views import mainPage
 
 urlpatterns = [
+    #path('', meetme.),
     path('admin/', admin.site.urls),
     path('api/v1/base-auth/', include('rest_framework.urls')),
     path('api/v1/auth/', include('djoser.urls')),
