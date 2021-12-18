@@ -39,7 +39,7 @@
       },
 
       /********************
-       * public functions *
+       * публичные функции *
        ********************/
       /*
        * Обновление событий отображаемой недели.
@@ -584,7 +584,7 @@
          var self = this;
          var options = this.options;
          if (calEvent.start.getTime() > calEvent.end.getTime()) {
-            return; // can't render a negative height
+            return; 
          }
 
          var eventClass, eventHtml, $calEvent, $modifiedEvent;
@@ -680,7 +680,7 @@
             //поиск первой группы для события
             for (var groupIndex = 0; groupIndex < curGroups.length; groupIndex++) {
                if (curGroups[groupIndex].length > 0) {
-                  //checks if the event starts after the end of the last event of the group
+                  
                   if (curGroups[groupIndex][curGroups [groupIndex].length - 1].data("calEvent").end.getTime() <= $curEvent.data("calEvent").start.getTime()) {
                      curGroups[groupIndex].push($curEvent);
                      if (lastEndTime.getTime() < $curEvent.data("calEvent").end.getTime()) {

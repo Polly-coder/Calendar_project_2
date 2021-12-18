@@ -47,7 +47,14 @@ $(document).ready(function() {
                $('#calendar').weekCalendar("removeUnsavedEvents");
             },
             buttons: {
-               save : function() {
+               отправить :  
+                  function sendEmail() 
+{
+    window.location = "mailto:em@i.l";
+}
+                  
+               ,
+               сохранить : function() {
                   calEvent.id = id;
                   id++;
                   calEvent.start = new Date(startField.val());
@@ -58,8 +65,9 @@ $(document).ready(function() {
                   $calendar.weekCalendar("removeUnsavedEvents");
                   $calendar.weekCalendar("updateEvent", calEvent);
                   $dialogContent.dialog("close");
+                  
                },
-               cancel : function() {
+               отменить : function() {
                   $dialogContent.dialog("close");
                }
             }
@@ -251,28 +259,6 @@ $(document).ready(function() {
 
    var $about = $("#about");
 
-   $("#about_button").click(function() {
-      $about.dialog({
-         title: "About this calendar demo",
-         width: 600,
-         close: function() {
-            $about.dialog("destroy");
-            $about.hide();
-         },
-         buttons: {
-            close : function() {
-               $about.dialog("close");
-            }
-         }
-      }).show();
-   });
-   $.extend($.ui.weekCalendar, {
-      defaults : {
-      buttons : true,
-   buttonText : {
-      cancel: "Отменить",
-      save : "Сохранить "
-   }
-}
-})
+   
+   
 });
