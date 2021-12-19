@@ -6,6 +6,7 @@ from meetme.models import Event, Slot
 from meetme.permissions import IsOwnerOrReadOnly
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.http import HttpResponse
+import requests
 
 # Create your views here.
 
@@ -30,7 +31,7 @@ class SlotsListView(generics.ListAPIView):
     queryset = Slot.objects.all()
     permission_classes = (IsAuthenticated, )
 
-'''
+
 def mainPage(request):
-    return(request, 'main.html')
-'''
+    return render(request, 'main.html', {})
+
