@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//RU""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>calendar</title>
+	<meta charset="utf-8"> 
+	<link rel='stylesheet' type='text/css' href='reset.css' />
+	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/start/jquery-ui.css' />
+	<link rel='stylesheet' type='text/css' href='weekcalendar.css' />
+	<link rel='stylesheet' type='text/css' href='demo.css' />
+	
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='weekcalendar.js'></script>
+	<script type='text/javascript' src='demo.js'></script>
+
+</head>
+<body> 
+	<h1>meetme</h1>
+	
+	<div id='calendar'></div>
+	<div id="event_edit_container">
+		<form>
+			<input type="hidden" />
+			<ul>
+				<li>
+					<span>Дата: </span><span class="date_holder"></span> 
+				</li>
+				<li>
+					<label for="start">Время начала: </label><select name="start"><option value="">Выберите время начала</option></select>
+				</li>
+				<li>
+					<label for="end">Время окончания: </label><select name="end"><option value="">Выберите время окончания</option></select>
+				</li>
+				<li>
+					<label for="title">Событие: </label><input type="text" name="title" />
+				</li>
+				<li>
+					<label for="body">Описание: </label><textarea name="body"></textarea>
+				</li>
+				<button type="button" class="ui-state-default ui-corner-all">Сохранить</button>
+				<button type="button" class="ui-state-default ui-corner-all">Отмена</button>
+			</ul>
+		</form>
+	</div>
+	
+	
+</body>
+</html>
