@@ -22,7 +22,8 @@ from meetme import views
 
 urlpatterns = [
     path('', views.mainPage),
-    path('admin/', admin.site.urls),
+    
+    path('admin/', admin.site.urls, views.enterPage),
     path('api/v1/base-auth/', include('rest_framework.urls')),
     path('api/v1/auth/', include('djoser.urls')),
     path('api/v1/meetme/', include('meetme.urls')),
